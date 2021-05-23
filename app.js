@@ -8,7 +8,7 @@ app.use(express.json())
 
 //dontenv 
 require('dotenv').config()
-const serverPort = process.env.SERVER_PORT
+const serverPort = process.env.RUNNING_PORT
 
 //View engine 
 app.set('view engine', 'ejs')
