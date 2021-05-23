@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./css/style.css" />
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<title>Pollution Reporter | Homepage</title>
+</head>
+
+<body>
+
+	<div class="flex items-center h-screen w-full bg-teal-lighter bg-blue-200">
+
+		<div class="-full bg-white rounded shadow-lg p-8 m-4 md:max-w-sm md:mx-auto ">
+			<!-- Title -->
+			<h1 class="block w-full text-center text-grey-darkest mb-6 text-black text-4xl">Pollution Reporter</h1>
+
+			<!-- Form  -->
+			<form action="/pollution/upload" method="POST" enctype="multipart/form-data"
+				class="mb-4 md:flex md:flex-wrap md:justify-between">
+				<div class="mb-4">
+					<!-- City  -->
+					<label class="block text-gray-700 text-sm font-bold mb-2" for="city">
+						City
+					</label>
+					<input type="text" name="city" placeholder="City, State" autocomplete="off" required
+						class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+				</div>
+				<!-- image -->
+				<div class="mb-6">
+					<label class="block text-gray-700 text-sm font-bold mb-2" for="image">
+						Image
+					</label>
+					<input name="image" type="file" required
+						class="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline">
+				</div>
+
+				<!-- button -->
+				<div class="flex items-center justify-items-between">
+					<button
+						class="bg-blue-500 hover:bg-blue-700  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+						type="submit">
+						Save
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+</body>
+
+</html>
