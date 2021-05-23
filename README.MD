@@ -1,4 +1,4 @@
-##Pollution Reporter
+## Pollution Reporter
 Project made for star2Impact nodejs super guide. 
 
 Requirements: 
@@ -13,7 +13,7 @@ Requirements:
 
 ![Website Screenshot](homepage.png)
 
-##Getting Started
+## Getting Started
 1. Clone the repo 
 2. Setup a mySql DB
 3. Import the project migration file `pollution_report.sql`
@@ -36,7 +36,7 @@ npm install
 npm start
 ``` 
 
-##Usage 
+## Usage 
 To access the submit form go the following url
 ``` url
 http://localhost:3000/pollution
