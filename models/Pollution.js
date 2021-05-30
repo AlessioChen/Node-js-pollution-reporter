@@ -3,7 +3,11 @@ const db = require("../utils/dbConnection")
 // get all the rows from db table
 const getAll = (callback) => {
 
-    db.query("SELECT * from pollution",
+    let sql = "SELECT * from ??"
+    let inserts = ['pollution']
+    query = db.format(sql, inserts)
+
+    db.query(query,
         (error, results) => {
             if (error) {
                 callback(error.stack)
@@ -23,13 +27,17 @@ const getAll = (callback) => {
 // insert new row into db table 
 const addRow = (data) => {
 
-    const query = `INSERT INTO pollution (city, photo) VALUES ('${data.city}', '${data.imagesrc}')`
+    let sql = `INSERT INTO ?? (?? , ??) VALUES (?? ,??)`
+    let inserts = ['pollution', 'city', 'photo', '${data.city}', '${data.imagesrc}']
+
+    const query = db.format(sql, inserts)
+    console.log(query)
     db.query(query, (error, results) => {
-    
-        if(error){
+
+        if (error) {
             return error.stack
         }
-        console.log("Data added to db")    
+        console.log("Data added to db")
     }
 
     )
