@@ -15,9 +15,9 @@ Requirements:
 
 ## Getting Started
 1. Clone the repo 
-2. Setup a mySql DB
+2. Setup a MySQL DB
 3. Import the project migration file `pollution_report.sql`
-4. Create a `.env` file and fill it with you DB data 
+4. Create a `.env` file and fill it with your DB data 
 ```
 DB_HOST=YOUR_HOST
 DB_USER=YOUR_USERNAME
@@ -37,13 +37,13 @@ npm start
 ``` 
 
 ## Usage 
-To access the submit form go the following url
-``` url
+To access the submission form go to the following URL
+``` URL
 http://localhost:3000/pollution
 ```
 
-I created only one endpoint where user can see all the reports: 
-```url
+I created only one endpoint where the user can see all the reports: 
+```URL
 http://localhost:3000/pollution/all
 ````
 
